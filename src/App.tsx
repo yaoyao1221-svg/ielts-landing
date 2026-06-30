@@ -16,7 +16,7 @@ export default function App() {
     <BrowserRouter basename="/ielts-landing">
       <Routes>
         <Route path="/" element={
-          <div className="min-h-screen bg-white">
+          <div className="min-h-screen w-full bg-white">
             <Header />
             <main>
               <Hero />
