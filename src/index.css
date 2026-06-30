@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef3ff;
+  --color-brand-100: #dbe4ff;
+  --color-brand-200: #bac8ff;
+  --color-brand-300: #91a7ff;
+  --color-brand-400: #748ffc;
+  --color-brand-500: #5c7cfa;
+  --color-brand-600: #4c6ef5;
+  --color-brand-700: #4263eb;
+  --color-brand-800: #3b5bdb;
+  --color-brand-900: #364fc7;
+  --color-surface: #f8f9fa;
+  --color-surface-secondary: #f1f3f5;
+  --color-accent: #fab005;
+  --color-accent-light: #ffd43b;
+  --color-accent-bg: #fff9db;
+  --color-accent-border: #ffec99;
+  --color-ink: #1a1a1a;
+  --color-ink-secondary: #555;
+  --color-ink-tertiary: #999;
+  --color-border: #ddd;
+  --color-border-light: #ebebeb;
+  --radius-card: 12px;
+  --radius-card-lg: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--color-ink-secondary);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: var(--color-accent-border);
+  color: var(--color-ink);
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+}
