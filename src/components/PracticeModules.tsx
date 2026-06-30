@@ -1,6 +1,9 @@
+import { Link } from 'react-router-dom'
+
 const modules = [
   {
     name: 'Listening',
+    link: '/listening',
     color: 'from-blue-500 to-blue-600',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">
@@ -12,6 +15,7 @@ const modules = [
   },
   {
     name: 'Reading',
+    link: '/reading',
     color: 'from-emerald-500 to-emerald-600',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">
@@ -23,6 +27,7 @@ const modules = [
   },
   {
     name: 'Writing',
+    link: '/writing',
     color: 'from-purple-500 to-purple-600',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">
@@ -35,6 +40,7 @@ const modules = [
   },
   {
     name: 'Speaking',
+    link: '/speaking',
     color: 'from-orange-500 to-orange-600',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">
@@ -77,14 +83,14 @@ export default function PracticeModules() {
                       <span className="w-1 h-1 rounded-full bg-[var(--color-brand-400)]" />
                       {type}
                     </div>
-                  ))}
+            ))} 
                 </div>
-                    <a
-                      href="#"
-                      className="mt-4 inline-flex text-sm font-medium text-[var(--color-brand-600)] hover:text-[var(--color-brand-700)] transition-colors"
-                    >
-                      开始练习 →
-                    </a>
+                <Link
+                  to={mod.link}
+                  className="mt-4 inline-flex text-sm font-medium text-[var(--color-brand-600)] hover:text-[var(--color-brand-700)] transition-colors"
+                >
+                  开始练习 →
+                </Link>
               </div>
             </div>
           ))}

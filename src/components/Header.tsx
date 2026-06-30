@@ -41,20 +41,7 @@ export default function Header() {
           )}
         </nav>
 
-        <div className="hidden md:flex items-center gap-2">
-          <Link
-            to="/reading"
-            className="px-4 py-2.5 text-sm font-medium text-[var(--color-ink-secondary)] hover:text-[var(--color-ink)] transition-colors duration-200 rounded-lg hover:bg-[var(--color-surface-secondary)]"
-          >
-            快速练习
-          </Link>
-          <Link
-            to="/speaking"
-            className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[var(--color-brand-500)] to-[var(--color-brand-600)] hover:from-[var(--color-brand-600)] hover:to-[var(--color-brand-700)] rounded-xl shadow-sm hover:shadow-[0_4px_24px_rgba(76,110,245,0.25)] transition-all duration-200"
-          >
-            开始练习
-          </Link>
-        </div>
+        <div className="hidden md:flex items-center" />
 
         {/* Mobile menu button */}
         <button
@@ -105,20 +92,6 @@ export default function Header() {
               )
             )}
             <div className="pt-4 space-y-3">
-              <Link
-                to="/reading"
-                onClick={() => setMenuOpen(false)}
-                className="block w-full text-center px-4 py-2.5 text-sm font-medium text-[var(--color-ink-secondary)] border border-[var(--color-border)] rounded-xl hover:bg-[var(--color-surface-secondary)] transition-colors"
-              >
-                阅读训练
-              </Link>
-              <Link
-                to="/speaking"
-                onClick={() => setMenuOpen(false)}
-                className="block w-full text-center px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[var(--color-brand-500)] to-[var(--color-brand-600)] rounded-xl transition-all duration-200"
-              >
-                口语练习
-              </Link>
             </div>
           </div>
         </div>

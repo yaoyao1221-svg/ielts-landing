@@ -13,7 +13,7 @@ import ReadingPage from './pages/ReadingPage'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ielts-landing">
       <Routes>
         <Route path="/" element={
           <div className="min-h-screen bg-white">

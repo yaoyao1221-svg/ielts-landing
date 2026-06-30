@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom'
+
 const features = [
   {
+    link: '/study-plan',
     color: 'red',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -10,6 +13,7 @@ const features = [
     desc: '根据你的目标分数和考试日期，AI 自动生成个性化复习计划。',
   },
   {
+    link: '/writing',
     color: 'blue',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -21,6 +25,7 @@ const features = [
     desc: 'Task 1 / Task 2 作文逐篇分析结构、语法、词汇与逻辑连贯性。',
   },
   {
+    link: '/speaking',
     color: 'red',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -31,6 +36,7 @@ const features = [
     desc: '模拟雅思口语 Part 1-3，配有时长控制和示范回答。',
   },
   {
+    link: '/reading',
     color: 'white',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -41,6 +47,7 @@ const features = [
     desc: '限时阅读练习、题型特训、文章精析、错题复盘。',
   },
   {
+    link: '/listening',
     color: 'blue',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -51,6 +58,7 @@ const features = [
     desc: '分 Section 音频训练，含关键词提示与答题复盘。',
   },
   {
+    link: '/mock-test',
     color: 'white',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -93,6 +101,13 @@ export default function Features() {
               </div>
               <h3 className="mt-4 text-base font-semibold text-[var(--color-ink)]">{feature.title}</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-ink-secondary)]">{feature.desc}</p>
+              <Link
+                to={feature.link}
+                className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-[var(--color-brand-600)] hover:text-[var(--color-brand-700)] transition-colors"
+              >
+                开始练习
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>
+              </Link>
             </div>
             )
           })}
